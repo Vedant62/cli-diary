@@ -4,7 +4,7 @@ from pathlib import Path
 import json
 import argparse
 from datetime import datetime
-config_location = '/Users/vedantsharma/Documents/diary_config.json'
+# config_location = <YOUR-PREFERRED-STORAGE-LOCATION> 
 months = {
     '1': 'jan',
     '2': 'feb',
