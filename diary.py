@@ -24,16 +24,16 @@ current_datetime = datetime.now()
 def setup(location, name):
     path  = Path(location)
     created_path = path / name
-    created_path.mkdir(parents= True, exist_ok=True) # creates a folder (name) at location
+    created_path.mkdir(parents= True, exist_ok=True)
 
     with open(config_location, 'r+') as fp:
         json.dump({"diary_loc": str(created_path)}, fp, indent=2)
 
-    #now creating month folders from current -> december
+    # creating month folders from current -> december
     
     for i in range(current_datetime.month, 13):
         new_path = created_path/ months[str(i)]
-        new_path.mkdir(parents=True, exist_ok=True) # creates month foldes in diary
+        new_path.mkdir(parents=True, exist_ok=True) 
 
 def move_diary(source, destination):
     src = Path(source)
